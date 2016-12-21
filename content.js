@@ -3,9 +3,14 @@
  */
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-      var new_icon = 'http://katrina.im/res/icon.gif';
+      var new_icon = 'http://katrina.im/res/' + message + '.gif';
       var el, icon, link;
       el = document.querySelectorAll('head link[rel*="icon"]');
+      // Remove existing favicons
+      Array.prototype.forEach.call(el, function (node) {
+          node.parentNode.removeChild(node);
+      });
+      el = document.querySelectorAll('head link[type="image/x-icon"]');
       // Remove existing favicons
       Array.prototype.forEach.call(el, function (node) {
           node.parentNode.removeChild(node);
