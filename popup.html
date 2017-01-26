@@ -6,12 +6,48 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Mark This Tab</title>
     <style>
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-family: "Arial Black", sans-serif;
         font-size: 100%;
-        width: 70px;
+        font-weight: 550;
+        width: 100px;
+        height: 120px;
+        margin: 0;
+      }
+      .btn {
+        color: #FFF;
+        height: 20px;
+        width: 80px;
+        padding: 10px;
+        padding-top: 7px;
+        margin-bottom: 2px;
+        border-radius: 3px;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      p {
+        height: 20px;
+        width: 90px;
+        margin: 0;
+        padding: 5px;
+      }
+      #red_btn {
+        background-color: #F44336;
+      }
+      #orange_btn {
+        background-color: #FF9800;
+      }
+      #yellow_btn {
+        background-color: #FFEB3B;
+      }
+      #green_btn {
+        background-color: #8BC34A;
+      }
+      #blue_btn {
+        background-color: #2196F3;
       }
     </style>
 
@@ -24,12 +60,12 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <p>Mark it:</p>
-    <button id="red_btn">Red</button>
-    <button id="orange_btn">Orange</button>
-    <button id="yellow_btn">Yellow</button>
-    <button id="green_btn">Green</button>
-    <button id="blue_btn">Blue</button>
+    <p>Mark Tab</p>
+    <div id="red_btn" class="btn">Red</div>
+    <div id="orange_btn" class="btn">Orange</div>
+    <div id="yellow_btn" class="btn">Yellow</div>
+    <div id="green_btn" class="btn">Green</div>
+    <div id="blue_btn" class="btn">Blue</div>
   </body>
 </html>
 
